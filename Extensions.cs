@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace PokeSpiky
@@ -10,6 +11,11 @@ namespace PokeSpiky
         {
             int randomValue = Random.Range(0, list.Count());
             return list.ElementAt(randomValue);
+        }
+
+        public static Vector3 ToVector3XZ(this Vector2 v3)
+        {
+            return new Vector3(v3.x, 0, v3.y);
         }
     }
 }
