@@ -10,11 +10,18 @@ namespace SpikyCoreInitializer
     public class AddPackageTool
     {
         private const string SPRITE__2D_PACKAGE = "com.unity.2d.sprite";
+        private const string RECORDER_PACKAGE = "com.unity.recorder";
         
         [MenuItem("Spiky Tools/Packages/Add 2D Sprite Package")]
         private static void Add2DSPritePackage()
         {
             CheckIfExistAndAddPackage(SPRITE__2D_PACKAGE);
+        }
+        
+        [MenuItem("Spiky Tools/Packages/Add Recorder")]
+        private static void AddRecorderPackage()
+        {
+            CheckIfExistAndAddPackage(RECORDER_PACKAGE);
         }
 
         private static async void CheckIfExistAndAddPackage(string package)
