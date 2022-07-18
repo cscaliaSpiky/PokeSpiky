@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using DG.Tweening;
+//using DG.Tweening;
 using UnityEngine;
 
 public class HUDManager : MonoBehaviour
@@ -13,7 +13,7 @@ public class HUDManager : MonoBehaviour
     
     private void Start()
     {
-        GameOverCondition.instance.OnGameOver += OnGameOver;
+        //GameOverCondition.instance.OnGameOver += OnGameOver;
         DebugMenu.Instance.OnDebugMenuOpened += OnDebugMenuOpened;
         activePosition = hudTransform.localPosition.x;
         hidePosition = hudTransform.localPosition.x - hudTransform.rect.width;
@@ -36,14 +36,14 @@ public class HUDManager : MonoBehaviour
 
     void SetActive(bool active)
     {
-        if (active)
-        {
-            hudTransform.DOLocalMoveX(activePosition, .3f);
-        }
-        else
-        {
-            hudTransform.DOLocalMoveX(hidePosition, .3f);
-        }
+        // if (active)
+        // {
+        //     hudTransform.DOLocalMoveX(activePosition, .3f);
+        // }
+        // else
+        // {
+        //     hudTransform.DOLocalMoveX(hidePosition, .3f);
+        // }
     }
 
     private void OnDestroy()
