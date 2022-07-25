@@ -13,7 +13,7 @@ public class HUDManager : MonoBehaviour
     
     private void Start()
     {
-        //GameOverCondition.instance.OnGameOver += OnGameOver;
+        GameOverCondition.instance.OnGameOver += OnGameOver;
         DebugMenu.Instance.OnDebugMenuOpened += OnDebugMenuOpened;
         activePosition = hudTransform.localPosition.x;
         hidePosition = hudTransform.localPosition.x - hudTransform.rect.width;
@@ -34,7 +34,7 @@ public class HUDManager : MonoBehaviour
         SetActive(false);
     }
 
-    void SetActive(bool active)
+    public void SetActive(bool active)
     {
         if (active)
         {
