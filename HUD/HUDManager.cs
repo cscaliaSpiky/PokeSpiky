@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DG.Tweening;
 //using DG.Tweening;
 using UnityEngine;
 
@@ -36,14 +37,14 @@ public class HUDManager : MonoBehaviour
 
     void SetActive(bool active)
     {
-        // if (active)
-        // {
-        //     hudTransform.DOLocalMoveX(activePosition, .3f);
-        // }
-        // else
-        // {
-        //     hudTransform.DOLocalMoveX(hidePosition, .3f);
-        // }
+        if (active)
+        {
+            hudTransform.DOLocalMoveX(activePosition, .3f);
+        }
+        else
+        {
+            hudTransform.DOLocalMoveX(hidePosition, .3f);
+        }
     }
 
     private void OnDestroy()
