@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+
 using DG.Tweening;
 using UnityEngine;
 
@@ -10,8 +11,8 @@ public class HUDManager : MonoBehaviour
     private float hidePosition;
 
     public List<GameObject> objectsToHide;
-    
-    private void Start()
+
+    public virtual void Start()
     {
         GameOverCondition.instance.OnGameOver += OnGameOver;
         DebugMenu.Instance.OnDebugMenuOpened += OnDebugMenuOpened;
@@ -34,7 +35,7 @@ public class HUDManager : MonoBehaviour
         SetActive(false);
     }
 
-    public void SetActive(bool active)
+    public virtual void SetActive(bool active)
     {
         if (active)
         {
