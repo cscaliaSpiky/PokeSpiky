@@ -7,6 +7,6 @@ public class CurrentLevelIndex : MonoBehaviour
 
     private void Start()
     {
-        levelText.text = $"LEVEL {DefaultUserManager.Instance.UserData.CurrentLevel + 1}";
+        levelText.text = $"LEVEL {GameManager.Instance.CurrentLevel + 1}";
     }
 }

@@ -5,14 +5,14 @@ public class GameOverCondition
 {
     public static GameOverCondition instance;
 
-    public IPopUp winPopup;
-    public IPopUp losePopup;
+    public BasePopUp winPopup;
+    public BasePopUp losePopup;
     
     public Action<bool> OnGameOver;
 
     private bool used;
     
-    public GameOverCondition(IPopUp winPopup, IPopUp losePopup)
+    public GameOverCondition(BasePopUp winPopup, BasePopUp losePopup)
     {
         instance = this;
         this.winPopup = winPopup;
