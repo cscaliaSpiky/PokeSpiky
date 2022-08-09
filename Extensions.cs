@@ -13,7 +13,7 @@ namespace PokeSpiky
             return list.ElementAt(randomValue);
         }
 
-        public static Vector3 ToVector3XZ(this Vector2 v3)
+        public static Vector3 ProjectUp(this Vector2 v3)
         {
             return new Vector3(v3.x, 0, v3.y);
         }
