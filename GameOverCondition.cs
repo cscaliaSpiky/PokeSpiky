@@ -19,20 +19,20 @@ public class GameOverCondition
         this.losePopup = losePopup;
     }
     
-    public void Win()
+    public void Win(float delay = 0)
     {
         if (used)
             return;
         used = true;
-        UpdateService.Instance.ExecuteActionAfterSeconds(2, OpenSuccessPopup);
+        UpdateService.Instance.ExecuteActionAfterSeconds(delay, OpenSuccessPopup);
         OnGameOver?.Invoke(true);
     }
 
-    public void Lose()
+    public void Lose(float delay = 0)
     {
         if (used)
             return;
-        UpdateService.Instance.ExecuteActionAfterSeconds(2, OpenFailedPopup);
+        UpdateService.Instance.ExecuteActionAfterSeconds(delay, OpenFailedPopup);
         OnGameOver?.Invoke(false);
         used = true;
     }
