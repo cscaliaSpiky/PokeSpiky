@@ -17,5 +17,11 @@ namespace PokeSpiky
         {
             return new Vector3(v3.x, 0, v3.y);
         }
+        
+        public static T CreateInstance<T>(this T prefab, Transform parent = null) where T : Object
+        {
+            return GameObject.Instantiate(prefab, parent);
+        }
+
     }
 }
