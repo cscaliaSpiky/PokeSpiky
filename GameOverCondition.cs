@@ -1,7 +1,8 @@
 using System;
+using UnityEngine;
 
-
-public class GameOverCondition
+[DefaultExecutionOrder(-1)]
+public class GameOverCondition : MonoBehaviour
 {
     public static GameOverCondition instance;
 
@@ -12,11 +13,9 @@ public class GameOverCondition
 
     private bool used;
     
-    public GameOverCondition(BasePopUp winPopup, BasePopUp losePopup)
+    public void Awake()
     {
         instance = this;
-        this.winPopup = winPopup;
-        this.losePopup = losePopup;
     }
     
     public void Win(float delay = 0)
